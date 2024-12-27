@@ -11,4 +11,10 @@ const fetchData = async () => {
   console.log(data.piada.piada);
 };
 
+window.onload = () => {
+  if (!localStorage.getItem("user")) {
+    window.location.href = "/login";
+  }
+};
+
 window.fetchData = fetchData;
